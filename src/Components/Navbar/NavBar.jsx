@@ -24,7 +24,7 @@ const NavBar = () => {
                                     <li><a>My Toy</a></li>
                                 </ul>
                             </li>
-                            <li><a>Login</a></li>
+                            <li><Link to='/login'>Login</Link></li>
                             <li><Link to='/blog'>Blog</Link></li>
                         </ul>
                     </div>
@@ -38,7 +38,7 @@ const NavBar = () => {
                         <li><Link>All Toys</Link></li>
                         <li><Link>Add Toy</Link></li>
                         <li><Link>My Toy</Link></li>
-                        <li><Link>Login</Link></li>
+                        <li><Link to='/login'>Login</Link></li>
                         <li><Link to='/blog'>Blog</Link></li>
                     </ul>
                 </div>
