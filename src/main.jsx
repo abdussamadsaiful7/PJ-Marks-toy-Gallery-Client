@@ -12,6 +12,7 @@ import Register from './Components/Register/Register';
 import Blog from './Components/Blog/Blog';
 import NavBar from './Components/Navbar/NavBar';
 import Footer from './Components/Footer/Footer';
+import FourPage from './Components/F404Page/FourPage';
 
 
 
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+    errorElement:<FourPage></FourPage>,
     children: [
       {
         path: '/',
