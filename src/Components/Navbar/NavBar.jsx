@@ -43,7 +43,7 @@ const NavBar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="lg:btn lg:btn-outline btn-warning hidden">About Us</a>
+                    <Link><a className="lg:btn lg:btn-outline btn-warning hidden">About Us</a></Link>
                 </div>
             </div>
         </div>
