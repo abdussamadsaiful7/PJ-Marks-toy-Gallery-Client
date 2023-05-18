@@ -5,7 +5,7 @@ import { FaCalendarAlt, FaCommentDots, FaMapMarkerAlt, FaPhoneAlt, FaRegCircle }
 const Address = () => {
     return (
         <div>
-            <div className='grid grid-cols-3 gap-4 px-10 py-20 bg-black text-white rounded mb-10'>
+            <div className='grid lg:grid-cols-3 gap-4 md:px-10 py-20 bg-black text-white rounded mb-10'>
                 <div className='flex items-center gap-4'>
                     <div className='relative'>
                         <span className='text-4xl'> <FaCalendarAlt /></span>

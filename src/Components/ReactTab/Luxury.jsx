@@ -7,7 +7,7 @@ const Luxury = ({luxury}) => {
     const {LuxuryCars} = luxury;
     console.log(luxury)
     return (
-        <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-4 mt-10 px-20'>
+        <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-4 mt-5 lg:px-20'>
             {
                 LuxuryCars?.map(car =>
                     <div className="p-4 shadow-2xl" key={car.id} car={car}>

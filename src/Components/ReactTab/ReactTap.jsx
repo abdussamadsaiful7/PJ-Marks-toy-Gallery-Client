@@ -28,14 +28,18 @@ const ReactTap = () => {
                 }
             </TabPanel>
             <TabPanel>
-                {
-                    cars?.map(luxury => <Luxury luxury={luxury} key={luxury._id}></Luxury>)
-                }
+                <div className='my-10'>
+                    {
+                        cars?.map(luxury => <Luxury luxury={luxury} key={luxury._id}></Luxury>)
+                    }
+                </div>
             </TabPanel>
             <TabPanel>
-                {/* {
-                    classics.map(classic => <Jeep classic={classic} key={classic._id}></Jeep>)
-                } */}
+                <div className='my-14'>
+                    {
+                        cars?.map(jeep => <Jeep jeep={jeep} key={jeep._id}></Jeep>)
+                    }
+                </div>
             </TabPanel>
         </Tabs>
     );
