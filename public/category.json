@@ -1,0 +1,107 @@
+[
+    {
+       "_id": 1,
+        "ClassicCars": [
+            {
+                "id": 1,
+                "name": "Vintage Roadster",
+                "picture": "https://i.ibb.co/d24RpyB/pexels-alexgtacar-1592384.jpg",
+                "price": 29.99,
+                "rating": 4.5,
+                "details": "The Vintage Roadster is a classic toy car inspired by vintage roadsters. It features a timeless design that captures the essence of retro automobiles. With its sleek lines and attention to detail, this toy car brings a touch of nostalgia to playtime. The Vintage Roadster is produced by ToyCo, known for their commitment to quality and craftsmanship. It is made with high-quality materials to ensure durability and longevity. Whether it's for display or imaginative play, the Vintage Roadster is sure to provide hours of enjoyment for car enthusiasts of all ages.",
+                "producer": "ToyCo",
+                "quality": "High"
+            },
+            {
+                "id": 2,
+                "name": "Speedy Racer",
+                "picture": "https://i.ibb.co/YtdrgFM/pexels-arnie-watkins-3156482.jpg",
+                "price": 19.99,
+                "rating": 4.2,
+                "details": "The Speedy Racer is a sleek and fast toy car designed for racing enthusiasts. Its aerodynamic design and powerful engine make it perfect for zooming around the track or competing with friends. With its vibrant colors and sporty appearance, the Speedy Racer stands out from the crowd. It is manufactured by PlayTime, a renowned toy company known for their commitment to creating exciting and engaging play experiences. The Speedy Racer offers a balance of speed and control, making it suitable for both beginners and experienced racers. Its medium quality construction ensures reliability and durability during intense racing sessions. Get ready to rev up the engines and experience thrilling races with the Speedy Racer!",
+                "producer": "PlayTime",
+                "quality": "Medium"
+            },
+            {
+                "id": 3,
+                "name": "Chrome Cruiser",
+                "picture": "https://i.ibb.co/4pbTQH1/pexels-mike-bird-132539.jpg",
+                "price": 24.99,
+                "rating": 4.0,
+                "details": "The Chrome Cruiser is a toy car that combines a shiny chrome exterior with a retro design. Its eye-catching appearance makes it stand out in any collection or playtime setting. The Chrome Cruiser is perfect for kids and collectors who appreciate classic aesthetics. Produced by FunToys, a trusted toy manufacturer, this car guarantees a high-quality product. The Chrome Cruiser offers a smooth and enjoyable play experience, whether it's cruising along imaginary roads or participating in exciting adventures. Its sleek lines and attention to detail showcase the craftsmanship and dedication to quality. Add a touch of nostalgia and style to your toy car collection with the Chrome Cruiser.",
+                "producer": "FunToys",
+                "quality": "High"
+            }
+        ]
+    },
+    {
+        "_id": 2,
+        "LuxuryCars": [
+            {
+                "id": 1,
+                "name": "Super Sports",
+                "picture": "super_sports.jpg",
+                "price": 49.99,
+                "rating": 4.8,
+                "details": "The Super Sports is a luxury toy car that replicates the style and performance of high-end sports cars. With its sleek and aerodynamic design, this toy car exudes elegance and sophistication. The Super Sports is perfect for kids and collectors who appreciate the finer things in life. Produced by EliteToys, a reputable brand known for their attention to detail and exceptional quality, this car offers a premium play experience. The Super Sports features realistic elements such as detailed interiors, glossy paint finish, and precision-engineered wheels. Its high-quality construction ensures durability and longevity, making it a prized possession for any toy car enthusiast. Get ready to experience the thrill of driving a luxury sports car with the Super Sports!",
+                "producer": "EliteToys",
+                "quality": "Premium"
+            },
+            {
+                "id": 2,
+                "name": "Golden Limousine",
+                "picture": "golden_limousine.jpg",
+                "price": 59.99,
+                "rating": 4.6,
+                "details": "The Golden Limousine is a luxurious toy car modeled after a glamorous limousine. With its golden exterior and elegant design, this toy car radiates opulence and sophistication. It's perfect for kids who want to play out luxurious scenarios or collectors who appreciate high-end vehicles. The Golden Limousine is produced by LuxuryPlay, a renowned brand known for their commitment to creating premium toys. The attention to detail in this car is exceptional, from the intricately designed interiors to the shimmering golden finish. The Golden Limousine offers a touch of grandeur and allows kids to imagine themselves as VIPs or celebrities. With its premium quality construction, this toy car guarantees durability and hours of imaginative play. Experience the luxury and style of a limousine with the Golden Limousine toy car!",
+                "producer": "LuxuryPlay",
+                "quality": "Premium"
+            },
+            {
+                "id": 3,
+                "name": "Diamond Edition",
+                "picture": "diamond_edition.jpg",
+                "price": 99.99,
+                "rating": 4.9,
+                "details": "The Diamond Edition is an exclusive toy car that embodies luxury and extravagance. This extraordinary car is adorned with diamond accents and features premium craftsmanship. Every detail of the Diamond Edition is meticulously designed to create a truly remarkable toy car. From its sparkling exterior to its exquisite interior, this car exudes elegance and sophistication. Produced by PrestigeToys, a brand synonymous with unparalleled quality and craftsmanship, the Diamond Edition is a testament to their commitment to creating exceptional toys. With its attention-grabbing design and top-notch build quality, this car is a collector's dream. The Diamond Edition offers a truly unique and lavish play experience, making it a prized possession for those who appreciate the finer things in life. Indulge in the ultimate luxury with the Diamond Edition toy car!",
+                "producer": "PrestigeToys",
+                "quality": "Luxury"
+            }
+        ]
+    },
+    {
+        "_id": 3,
+        "JeepCars": [
+            {
+                "id": 1,
+                "name": "Off-Road Adventure",
+                "picture": "",
+                "price": 39.99,
+                "rating": 4.4,
+                "details": "The Off-Road Adventure is a rugged toy car built for thrilling off-road experiences. This car is designed to conquer challenging terrains and take on exciting adventures. With its sturdy construction and robust features, the Off-Road Adventure toy car is perfect for outdoor play and exploration. Produced by AdventureToys, a brand known for their adventurous spirit and durable toys, this car guarantees hours of action-packed fun. The Off-Road Adventure car is equipped with high-traction tires, suspension systems, and other off-road enhancements, allowing it to tackle rough surfaces with ease. Whether it's conquering rocky paths or maneuvering through sandy dunes, this toy car is ready for any off-road challenge. Fuel your imagination and embark on thrilling off-road adventures with the Off-Road Adventure toy car!",
+                "producer": "AdventureToys",
+                "quality": "High"
+            },
+            {
+                "id": 2,
+                "name": "Safari Explorer",
+                "picture": "",
+                "price": 34.99,
+                "rating": 4.2,
+                "details": "The Safari Explorer is a toy car that lets you embark on exciting safari adventures. Designed with inspiration from wildlife explorations, this car allows kids to imagine themselves as intrepid explorers navigating through the wild. The Safari Explorer car features rugged styling and durable construction, making it perfect for outdoor play. Produced by WildToys, a brand known for their commitment to quality and imaginative play, this car guarantees a thrilling safari experience. With its adventurous design and attention to detail, the Safari Explorer car captures the essence of wildlife expeditions. Whether it's crossing imaginary rivers or encountering imaginary animals, this toy car brings the excitement of safari right to your playtime. Set off on a safari expedition with the Safari Explorer toy car and let your imagination run wild!",
+                "producer": "WildToys",
+                "quality": "Medium"
+            },
+            {
+                "id": 3,
+                "name": "Mud Monster",
+                "picture": "",
+                "price": 44.99,
+                "rating": 4.7,
+                "details": "The Mud Monster is a powerful toy car specifically designed to conquer muddy terrains. With its rugged and robust construction, this car is ready to tackle the toughest off-road challenges. The Mud Monster features large, knobby tires, lifted suspension, and specialized mud guards, allowing it to navigate through muddy trails with ease. Produced by MudMasters, a brand renowned for their off-road expertise, this toy car guarantees an exhilarating play experience. Whether it's splashing through muddy puddles or traversing muddy obstacles, the Mud Monster is built to handle it all. Its high-quality build ensures durability even in the harshest conditions. Get ready for thrilling off-road adventures and embrace the muddy fun with the Mud Monster toy car!",
+                "producer": "MudMasters",
+                "quality": "High"
+            }
+        ]
+    }
+]
