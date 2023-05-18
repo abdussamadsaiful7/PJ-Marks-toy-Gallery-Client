@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+/* .banner{
+    background: url("https://i.ibb.co/DGZwv90/extral-Banner.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+.extraOne{
+    background: url("https://i.ibb.co/DGZwv90/extral-Banner.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}

@@ -5,11 +5,15 @@ import car3 from '../../assets/car/car3.jpg'
 import car4 from '../../assets/car/car4.jpg'
 import car7 from '../../assets/car/car7.jpg'
 import car6 from '../../assets/car/car6.jpg'
+import Lottie from "lottie-react";
+import animation1 from "../../assets/animation/79797-car-lottie-animation.json";
 
 const Gallery = () => {
     return (
         <div className='lg:mx-20 mx-5 my-20'>
-            <h1 className='text-center text-4xl font-extrabold mb-5'>TOY CARS GALLERY</h1>
+            <div className='w-64 h-64 mx-auto' ><Lottie animationData={animation1} loop={true} /></div>
+            <h1 className='text-center text-4xl font-extrabold mb-5 text-fuchsia-900'>
+                TOY CARS GALLERY</h1>
             <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-4'>
                 <div className='p-4 shadow-2xl'>
                     <img className='w-full h-72 rounded-md' src={car1} alt="" />
