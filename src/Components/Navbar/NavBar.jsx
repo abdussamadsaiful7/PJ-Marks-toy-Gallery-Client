@@ -1,8 +1,26 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.jpg'
+import { AuthContext } from '../Provider/AuthProvider';
+
 
 const NavBar = () => {
+    const { user, logOut, loading } = useContext(AuthContext);
+
+    const notify = () => toast.error('Successfully logout!');
+
+
+    const handleLogout = () => {
+        logOut()
+            .then()
+            .catch(error => {
+                console.log(error)
+            })
+        if (loading) {
+            return <progress className="progress progress-error w-56" value="100" max="100"></progress>
+        }
+        notify();
+    }
     return (
         <div>
             <div className="navbar bg-base-100">
@@ -24,7 +42,8 @@ const NavBar = () => {
                                     <li><a>My Toy</a></li>
                                 </ul>
                             </li>
-                            <li><Link to='/login'>Login</Link></li>
+                            {user && <li><Link onClick={handleLogout}>Log out</Link></li>}
+                            {!user && <li><Link to='/login'>Login</Link></li>}
                             <li><Link to='/blog'>Blog</Link></li>
                         </ul>
                     </div>
@@ -36,10 +55,20 @@ const NavBar = () => {
                     <ul className="menu menu-horizontal px-1 text-green-500 font-bold">
                         <li><Link to='/'>Home</Link></li>
                         <li><Link>All Toys</Link></li>
-                        <li><Link>Add Toy</Link></li>
-                        <li><Link>My Toy</Link></li>
-                        <li><Link to='/login'>Login</Link></li>
+                        {
+                            user && <>
+                                <li><Link>Add Toy</Link></li>
+                                <li><Link>My Toy</Link></li>
+                            </>
+                        }
+                        {user && <li><Link onClick={handleLogout}>Log out</Link></li>}
+                        {!user && <li><Link to='/login'>Login</Link></li>}
                         <li><Link to='/blog'>Blog</Link></li>
+                        <div className="tooltip" data-tip="Fantasy-Gallery">
+                            {
+                                user && user?.email ? <img style={{ width: '40px', height: '40px', borderRadius: '50%' }} src={user?.photoURL} alt="" /> : null
+                            }
+                        </div>
                     </ul>
                 </div>
                 <div className="navbar-end">

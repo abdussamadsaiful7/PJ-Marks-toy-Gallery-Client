@@ -40,6 +40,7 @@ const Login = () => {
         googleLogin()
         .then(result =>{
             console.log(result.user);
+            navigate(from, { replace: true })
         })
         .catch(error => console.log(error))
     }
@@ -71,7 +72,7 @@ const Login = () => {
             <div className="divider">OR</div>
             <div className='text-center'>
                 <button onClick={handleGoogleSignIn} className="btn  btn-circle btn-outline">
-                    <img src={google} alt="" />
+                    <img src={google} />
                 </button>
             </div>
         </div>
