@@ -7,7 +7,7 @@ function App() {
  
 
   return (
-    <div className='lg:mx-10 px-4 py-5'>
+    <div>
     <NavBar></NavBar>
     <Outlet></Outlet>
     <Footer></Footer> 

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/logo.jpg'
+import logo from '../../assets/PJMARKS.png'
 import { AuthContext } from '../Provider/AuthProvider';
 
 
@@ -22,8 +22,8 @@ const NavBar = () => {
         notify();
     }
     return (
-        <div>
-            <div className="navbar bg-base-100">
+        <div className=''>
+            <div className="navbar bg-base-100 bg-gradient-to-r from-fuchsia-900 to-rgb(254, 249, 231) lg:px-20 pt-8">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -36,7 +36,7 @@ const NavBar = () => {
                                     Toys
                                     <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
                                 </a>
-                                <ul className="p-2 text-green-500">
+                                <ul className="p-2 text-white">
                                     <li><a>All Toys</a></li>
                                     <li><a>Add Toy</a></li>
                                     <li><a>My Toy</a></li>
@@ -47,24 +47,24 @@ const NavBar = () => {
                             <li><Link to='/blog'>Blog</Link></li>
                         </ul>
                     </div>
-                    <img className='w-10 h-10' src={logo} alt="" />
-                    <a className="btn btn-ghost normal-case text-xl text-yellow-500">
-                        FAN<span className='text-green-600'>tasy-gall</span>ERY</a>
+                    <img className='w-20 h-20' src={logo} alt="" />
+                    <Link to='/' className="btn btn-ghost normal-case text-3xl lg:mr-20 text-yellow-500">
+                        PJM<span className='text-green-600 font-extrabold'>ARKS</span> <br/></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1 text-green-500 font-bold">
-                        <li><Link to='/'>Home</Link></li>
-                        <li><Link>All Toys</Link></li>
+                    <ul className="menu menu-horizontal px-1 text-white font-bold">
+                        <li><Link to='/'>HOME</Link></li>
+                        <li><Link>ALL TOYS</Link></li>
                         {
                             user && <>
-                                <li><Link>Add Toy</Link></li>
-                                <li><Link>My Toy</Link></li>
+                                <li><Link>ADD TOY</Link></li>
+                                <li><Link>MY TOY</Link></li>
                             </>
                         }
-                        {user && <li><Link onClick={handleLogout}>Log out</Link></li>}
-                        {!user && <li><Link to='/login'>Login</Link></li>}
-                        <li><Link to='/blog'>Blog</Link></li>
-                        <div className="tooltip" data-tip="Fantasy-Gallery">
+                        {user && <li><Link onClick={handleLogout}>LOG OUT</Link></li>}
+                        {!user && <li><Link to='/login'>LOGIN</Link></li>}
+                        <li><Link to='/blog'>BLOG</Link></li>
+                        <div className="tooltip lg:ml-10" data-tip=" PJMARKS-GALLERY">
                             {
                                 user && user?.email ? <img style={{ width: '40px', height: '40px', borderRadius: '50%' }} src={user?.photoURL} alt="" /> : null
                             }

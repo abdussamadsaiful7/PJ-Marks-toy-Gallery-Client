@@ -1,14 +1,14 @@
 import React from 'react';
-import logo from '../../assets/logo.jpg'
+import logo from '../../assets/PJMARKS.png'
 
 const Footer = () => {
     return (
         <div>
             <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded">
                 <div>
-                    <img className='w-14 h-14' src={logo} alt="" />
+                    <img className='w-24 h-24' src={logo} alt="" />
                     <p className="font-bold">
-                        FANTASY GALLERY company Ltd. <br />Providing reliable tech since 1992
+                    PJMARKS-GALLERY company Ltd. <br />Providing reliable tech since 1992
                     </p>
                 </div>
                 <div className="grid grid-flow-col gap-4">
@@ -25,7 +25,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div>
-                    <p>Copyright © 2023 - All right reserved by Fantasy Gallery company Ltd</p>
+                    <p>Copyright © 2023 - All right reserved by  PJMARKS-GALLERY company Ltd</p>
                 </div>
             </footer>
         </div>
