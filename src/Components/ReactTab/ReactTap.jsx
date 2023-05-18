@@ -11,7 +11,9 @@ const ReactTap = () => {
     useEffect(() => {
         fetch('category.json')
             .then(res => res.json())
-            .then(data => setCars(data));
+            .then(data => {
+                setCars(data)
+            });
     }, [])
     return (
         <Tabs className='text-center'>
@@ -22,13 +24,13 @@ const ReactTap = () => {
             </TabList>
             <TabPanel>
                 {
-                    cars.map(classic => <Classic classic={classic} key={classic._id}></Classic>)
+                    cars?.map(classic => <Classic classic={classic} key={classic._id}></Classic>)
                 }
             </TabPanel>
             <TabPanel>
-                {/* {
-                    classics.map(classic => <Luxury classic={classic} key={classic._id}></Luxury>)
-                } */}
+                {
+                    cars?.map(luxury => <Luxury luxury={luxury} key={luxury._id}></Luxury>)
+                }
             </TabPanel>
             <TabPanel>
                 {/* {

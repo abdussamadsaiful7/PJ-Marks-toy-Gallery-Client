@@ -7,7 +7,7 @@ const Classic = ({ classic }) => {
     //const data = classic?.ClassicCars;
     //console.log(data)
     //const {name, picture, price, rating, producer, quality, details}= classic;
-    const { ClassicCars } = classic;
+    const { ClassicCars} = classic;
 
     return (
         <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-4 mt-10 px-20'>
