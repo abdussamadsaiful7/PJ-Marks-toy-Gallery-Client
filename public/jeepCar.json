@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Off-Road Adventure",
+        "picture": "https://i.ibb.co/sgr7dkZ/pexels-aaron-curtis-119435.jpg",
+        "price": 39.99,
+        "rating": 4.4,
+        "details": "The Off-Road Adventure is a rugged toy car built for thrilling off-road experiences. This car is designed to conquer challenging terrains and take on exciting adventures. With its sturdy construction and robust features, the Off-Road Adventure toy car is perfect for outdoor play and exploration. Produced by AdventureToys, a brand known for their adventurous spirit and durable toys, this car guarantees hours of action-packed fun. The Off-Road Adventure car is equipped with high-traction tires, suspension systems, and other off-road enhancements, allowing it to tackle rough surfaces with ease. Whether it's conquering rocky paths or maneuvering through sandy dunes, this toy car is ready for any off-road challenge. Fuel your imagination and embark on thrilling off-road adventures with the Off-Road Adventure toy car!",
+        "producer": "AdventureToys",
+        "quality": "High"
+    },
+    {
+        "id": 2,
+        "name": "Safari Explorer",
+        "picture": "https://i.ibb.co/Qcm98CR/pexels-aman-malik-13694183.jpg",
+        "price": 34.99,
+        "rating": 4.2,
+        "details": "The Safari Explorer is a toy car that lets you embark on exciting safari adventures. Designed with inspiration from wildlife explorations, this car allows kids to imagine themselves as intrepid explorers navigating through the wild. The Safari Explorer car features rugged styling and durable construction, making it perfect for outdoor play. Produced by WildToys, a brand known for their commitment to quality and imaginative play, this car guarantees a thrilling safari experience. With its adventurous design and attention to detail, the Safari Explorer car captures the essence of wildlife expeditions. Whether it's crossing imaginary rivers or encountering imaginary animals, this toy car brings the excitement of safari right to your playtime. Set off on a safari expedition with the Safari Explorer toy car and let your imagination run wild!",
+        "producer": "WildToys",
+        "quality": "Medium"
+    },
+    {
+        "id": 3,
+        "name": "Mud Monster",
+        "picture": "https://i.ibb.co/J3wmSLd/pexels-brett-sayles-1592261.jpg",
+        "price": 44.99,
+        "rating": 4.7,
+        "details": "The Mud Monster is a powerful toy car specifically designed to conquer muddy terrains. With its rugged and robust construction, this car is ready to tackle the toughest off-road challenges. The Mud Monster features large, knobby tires, lifted suspension, and specialized mud guards, allowing it to navigate through muddy trails with ease. Produced by MudMasters, a brand renowned for their off-road expertise, this toy car guarantees an exhilarating play experience. Whether it's splashing through muddy puddles or traversing muddy obstacles, the Mud Monster is built to handle it all. Its high-quality build ensures durability even in the harshest conditions. Get ready for thrilling off-road adventures and embrace the muddy fun with the Mud Monster toy car!",
+        "producer": "MudMasters",
+        "quality": "High"
+    }
+]

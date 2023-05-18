@@ -6,15 +6,37 @@ import Luxury from './Luxury';
 import Jeep from './Jeep';
 
 const ReactTap = () => {
-    const [cars, setCars] = useState([]);
 
+    //luxury toy cars
+    const [luxuryCars, setLuxuryCars] = useState([]);
     useEffect(() => {
-        fetch('category.json')
+        fetch('luxuryCar.json')
             .then(res => res.json())
             .then(data => {
-                setCars(data)
+                setLuxuryCars(data)
             });
     }, [])
+
+    //jeep toy cars
+    const [jeepCars, setJeepCars] = useState([]);
+    useEffect(() => {
+        fetch('jeepCar.json')
+            .then(res => res.json())
+            .then(data => {
+                setJeepCars(data)
+            });
+    }, [])
+
+    //classic toy cars 
+    const [classicCars, setClassicCars] = useState([]);
+    useEffect(() => {
+        fetch('classicCar.json')
+            .then(res => res.json())
+            .then(data => {
+                setClassicCars(data)
+            });
+    }, [])
+
     return (
         <Tabs className='text-center'>
             <TabList>
@@ -23,21 +45,24 @@ const ReactTap = () => {
                 <Tab>Jeep Cars toy</Tab>
             </TabList>
             <TabPanel>
-                {
-                    cars?.map(classic => <Classic classic={classic} key={classic._id}></Classic>)
-                }
+                <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-4 my-10 lg:px-20'>
+                    {
+                        classicCars?.map(classic => <Classic classic={classic} key={classic.id}></Classic>)
+                    }
+                </div>
+
             </TabPanel>
             <TabPanel>
-                <div className='my-10'>
+                <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-4 mt-10 lg:px-20 my-14'>
                     {
-                        cars?.map(luxury => <Luxury luxury={luxury} key={luxury._id}></Luxury>)
+                       luxuryCars?.map(luxury => <Luxury luxury={luxury} key={luxury._id}></Luxury>)
                     }
                 </div>
             </TabPanel>
             <TabPanel>
-                <div className='my-14'>
+                <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-4 lg:px-20 my-14'>
                     {
-                        cars?.map(jeep => <Jeep jeep={jeep} key={jeep._id}></Jeep>)
+                       jeepCars?.map(jeep => <Jeep jeep={jeep} key={jeep._id}></Jeep>)
                     }
                 </div>
             </TabPanel>
