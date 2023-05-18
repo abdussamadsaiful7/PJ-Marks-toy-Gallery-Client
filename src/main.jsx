@@ -13,6 +13,7 @@ import Blog from './Components/Blog/Blog';
 import NavBar from './Components/Navbar/NavBar';
 import Footer from './Components/Footer/Footer';
 import FourPage from './Components/F404Page/FourPage';
+import AuthProvider from './Components/Provider/AuthProvider';
 
 
 
@@ -20,7 +21,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
-    errorElement:<FourPage></FourPage>,
+    errorElement: <FourPage></FourPage>,
     children: [
       {
         path: '/',
@@ -52,6 +53,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <AuthProvider>
       <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 )
