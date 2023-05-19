@@ -1,13 +1,57 @@
 import React from 'react';
+import Swal from 'sweetalert2';
 
 const AddToy = () => {
+
+    const handleAddToy =(event)=>{
+        event.preventDefault();
+
+        const form = event.target;
+        const toyName = form.toyName.value;
+        const price = form.price.value;
+        const sellerName = form.sellerName.value;
+        const sellerEmail = form.sellerEmail.value;
+        const category = form.category.value;
+        const ratings = form.ratings.value;
+        const quantity = form.quantity.value;
+        const descriptions = form.descriptions.value;
+        const photo = form.photo.value;
+        
+        const newToy = {toyName, price, sellerName, sellerEmail, category, ratings, quantity, descriptions, photo};
+
+        console.log(newToy);
+
+        //send to the server;
+        fetch('http://localhost:5000/allToys',{
+            method:'POST',
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(newToy)
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            console.log(data);
+            if(data.insertedId){
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Your work has been saved',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+            }
+            form.reset();
+        })
+    }
+
     return (
         <div>
-            <form className="form-control px-20 py-20 bg-gradient-to-r from-green-700 to-yellow-100">
+            <form onSubmit={handleAddToy} className="form-control px-20 py-20 bg-gradient-to-r from-green-700 to-yellow-100">
                 <h1 className='text-center font-extrabold text-4xl'>Add Toy Cars</h1>
 
                 {/* name, price section */}
-                <div className='lg:flex items-center justify-center space-x-8'>
+                <div className='lg:flex items-center justify-center lg:space-x-8'>
                     <div>
                         <label className="label">
                             <span className="label-text">Toy Name</span>
@@ -28,7 +72,7 @@ const AddToy = () => {
                 </div>
 
                 {/* seller name, seller email section */}
-                <div className='lg:flex items-center justify-center space-x-8'>
+                <div className='lg:flex items-center justify-center lg:space-x-8'>
                     <div>
                         <label className="label">
                             <span className="label-text">Seller Name</span>
@@ -48,7 +92,7 @@ const AddToy = () => {
                 </div>
 
                 {/* sub-category, ratings section */}
-                <div className='lg:flex items-center justify-center space-x-8'>
+                <div className='lg:flex items-center justify-center lg:space-x-8'>
                     <div>
                         <p className='mb-1'>Sub-Category</p>
                         <select className="select select-bordered w-96" name="category">
@@ -69,7 +113,7 @@ const AddToy = () => {
                 </div>
 
                 {/* available quantity and descriptions */}
-                <div className='lg:flex items-center justify-center space-x-8'>
+                <div className='lg:flex items-center justify-center lg:space-x-8'>
                     <div>
                         <label className="label">
                             <span className="label-text"> Available quantity</span>

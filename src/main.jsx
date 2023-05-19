@@ -19,6 +19,7 @@ import LuxuryDetails from './Components/ReactTab/Details/LuxuryDetails';
 import JeepDetails from './Components/ReactTab/Details/JeepDetails';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import AddToy from './Components/AddToy/AddToy';
+import AllToys from './Components/AllToys/AllToys';
 
 
 
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
       {
         path: '/addToy',
         element: <AddToy></AddToy>
+      },
+      {
+        path: '/allToys',
+        element: <AllToys></AllToys>
       },
       {
         path: '/classicDetails/:id',
