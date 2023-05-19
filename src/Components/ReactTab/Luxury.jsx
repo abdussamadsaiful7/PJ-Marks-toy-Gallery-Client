@@ -11,7 +11,7 @@ const Luxury = ({ luxury }) => {
             <h1>Name: {name}</h1>
             <p>Quality: {quality}</p>
             <p>Price: $ {price}</p>
-            <Link><button className="btn btn-outline btn-warning btn-sm mt-4">View Details</button></Link>
+            <Link to={`/luxuryDetails/${luxury._id}`}><button className="btn btn-outline btn-warning btn-sm mt-4">View Details</button></Link>
             <div className="flex justify-between">
                 <div>
                     <p>Rating: {rating}</p>

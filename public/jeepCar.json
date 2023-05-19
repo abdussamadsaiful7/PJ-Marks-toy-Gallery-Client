@@ -1,6 +1,5 @@
 [
     {
-        "id": 1,
         "name": "Off-Road Adventure",
         "picture": "https://i.ibb.co/sgr7dkZ/pexels-aaron-curtis-119435.jpg",
         "price": 39.99,
@@ -10,7 +9,6 @@
         "quality": "High"
     },
     {
-        "id": 2,
         "name": "Safari Explorer",
         "picture": "https://i.ibb.co/Qcm98CR/pexels-aman-malik-13694183.jpg",
         "price": 34.99,
@@ -20,7 +18,6 @@
         "quality": "Medium"
     },
     {
-        "id": 3,
         "name": "Mud Monster",
         "picture": "https://i.ibb.co/J3wmSLd/pexels-brett-sayles-1592261.jpg",
         "price": 44.99,

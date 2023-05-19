@@ -3,7 +3,7 @@ import { FaFacebookSquare, FaPinterest, FaYoutube, FaInstagram } from "react-ico
 
 
 const Classic = ({ classic }) => {
-    const { name, picture, price, rating, producer, quality, details } = classic;
+    const { _id, name, picture, price, rating, producer, quality, details } = classic;
     
 
     return (
@@ -13,7 +13,7 @@ const Classic = ({ classic }) => {
                 <h1>Name: {name}</h1>
                 <p>Quality: {quality}</p>
                 <p>Price: $ {price}</p>
-                <Link to='/classicOne'><button className="btn btn-outline btn-warning btn-sm mt-4">View Details</button></Link>
+                <Link to={`/classicDetails/${classic._id}`}><button className="btn btn-outline btn-warning btn-sm mt-4">View Details</button></Link>
                 <div className="flex justify-between">
                     <div>
                         <p>Rating: {rating}</p>

@@ -1,6 +1,5 @@
 [
     {
-        "id": 1,
         "name": "Super Sports",
         "picture": "https://i.ibb.co/st8sTk6/pexels-jay-pizzle-15489298.jpg",
         "price": 49.99,
@@ -10,7 +9,6 @@
         "quality": "Premium"
     },
     {
-        "id": 2,
         "name": "Golden Limousine",
         "picture": "https://i.ibb.co/1LNZs0L/pexels-mike-bird-97353.jpg",
         "price": 59.99,
@@ -20,7 +18,6 @@
         "quality": "Premium"
     },
     {
-        "id": 3,
         "name": "Diamond Edition",
         "picture": "https://i.ibb.co/r7T1Sgp/pexels-pixabay-358070.jpg",
         "price": 99.99,

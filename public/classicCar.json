@@ -1,6 +1,5 @@
 [
     {
-        "id": 1,
         "name": "Vintage Roadster",
         "picture": "https://i.ibb.co/d24RpyB/pexels-alexgtacar-1592384.jpg",
         "price": 29.99,
@@ -10,7 +9,6 @@
         "quality": "High"
     },
     {
-        "id": 2,
         "name": "Speedy Racer",
         "picture": "https://i.ibb.co/YtdrgFM/pexels-arnie-watkins-3156482.jpg",
         "price": 19.99,
@@ -20,7 +18,6 @@
         "quality": "Medium"
     },
     {
-        "id": 3,
         "name": "Chrome Cruiser",
         "picture": "https://i.ibb.co/4pbTQH1/pexels-mike-bird-132539.jpg",
         "price": 24.99,

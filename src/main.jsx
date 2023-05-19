@@ -14,14 +14,9 @@ import NavBar from './Components/Navbar/NavBar';
 import Footer from './Components/Footer/Footer';
 import FourPage from './Components/F404Page/FourPage';
 import AuthProvider from './Components/Provider/AuthProvider';
-import ClassicOne from './Components/ReactTab/Details/ClassicOne';
-import ClassicTwo from './Components/ReactTab/Details/ClassicTwo';
-import ClassicThree from './Components/ReactTab/Details/ClassicThree';
-import LuxuryOne from './Components/ReactTab/Details/LuxuryOne';
-import LuxTwo from './Components/ReactTab/Details/LuxTwo';
-import JeepOne from './Components/ReactTab/Details/JeepOne';
-import JeepTwo from './Components/ReactTab/Details/JeepTwo';
-import JeepThree from './Components/ReactTab/Details/JeepThree';
+import ClassicDetails from './Components/ReactTab/Details/ClassicDetails';
+import LuxuryDetails from './Components/ReactTab/Details/LuxuryDetails';
+import JeepDetails from './Components/ReactTab/Details/JeepDetails';
 
 
 
@@ -48,37 +43,21 @@ const router = createBrowserRouter([
         element: <Blog></Blog>
       },
       {
-        path: '/classicOne',
-        element: <ClassicOne></ClassicOne>
+        path: '/classicDetails/:id',
+        element: <ClassicDetails></ClassicDetails>,
+        loader: ({params})=>fetch(`http://localhost:5000/classic/${params.id}`)
       },
       {
-        path: '/classicTwo',
-        element: <ClassicTwo></ClassicTwo>
+        path: '/luxuryDetails/:id',
+        element: <LuxuryDetails></LuxuryDetails>,
+        loader: ({params})=>fetch(`http://localhost:5000/luxury/${params.id}`)
       },
       {
-        path: '/classicThree',
-        element: <ClassicThree></ClassicThree>
-      },
-      {
-        path: '/luxuryOne',
-        element: <LuxuryOne></LuxuryOne>
-      },
-      {
-        path: '/luxuryTwo',
-        element: <LuxTwo></LuxTwo>
-      },
-      {
-        path: '/jeepOne',
-        element: <JeepOne></JeepOne>
-      },
-      {
-        path: '/jeepTwo',
-        element: <JeepTwo></JeepTwo>
-      },
-      {
-        path: '/JeepThree',
-        element: <JeepThree></JeepThree>
+        path: '/jeepDetails/:id',
+        element: <JeepDetails></JeepDetails>,
+        loader: ({params})=>fetch(`http://localhost:5000/jeep/${params.id}`)
       }
+      
     ]
   },
   {
