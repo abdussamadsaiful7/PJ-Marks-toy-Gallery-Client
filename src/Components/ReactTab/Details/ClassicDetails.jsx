@@ -3,16 +3,17 @@ import { useLoaderData } from 'react-router-dom';
 import { FaFacebookSquare, FaPinterest, FaYoutube, FaInstagram } from "react-icons/fa";
 
 const ClassicDetails = () => {
+    
     const loaderCard = useLoaderData();
     console.log(loaderCard);
     const { _id, name, picture, price, rating, producer, quality, details } = loaderCard;
     return (
         <div className='my-20'>
-            <div className='lg:flex justify-center items-center py-4 shadow-2xl 
-            md:mx-72 space-x-20'>
+            <div className='lg:flex justify-center items-center p-4 py-4 shadow-2xl 
+            md:mx-52 space-x-20'>
                 <div><img className="w-full h-72 rounded-md mb-4" src={picture} alt="" /></div>
-                <div className='space-y-3'>
-                    <h1>Name: {name}</h1>
+                <div className='space-y-2'>
+                    <h1 className='text-xl font-semibold'>Name: {name}</h1>
                     <p>Price: ${price}</p>
                     <p>Made in: {producer} Company Ltd</p>
                     <p>Quality: {quality}</p>

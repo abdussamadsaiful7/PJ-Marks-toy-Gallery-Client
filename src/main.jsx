@@ -17,6 +17,9 @@ import AuthProvider from './Components/Provider/AuthProvider';
 import ClassicDetails from './Components/ReactTab/Details/ClassicDetails';
 import LuxuryDetails from './Components/ReactTab/Details/LuxuryDetails';
 import JeepDetails from './Components/ReactTab/Details/JeepDetails';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import AddToy from './Components/AddToy/AddToy';
+
 
 
 
@@ -43,18 +46,22 @@ const router = createBrowserRouter([
         element: <Blog></Blog>
       },
       {
+        path: '/addToy',
+        element: <AddToy></AddToy>
+      },
+      {
         path: '/classicDetails/:id',
-        element: <ClassicDetails></ClassicDetails>,
+        element: <PrivateRoute><ClassicDetails></ClassicDetails></PrivateRoute>,
         loader: ({params})=>fetch(`http://localhost:5000/classic/${params.id}`)
       },
       {
         path: '/luxuryDetails/:id',
-        element: <LuxuryDetails></LuxuryDetails>,
+        element: <PrivateRoute><LuxuryDetails></LuxuryDetails></PrivateRoute>,
         loader: ({params})=>fetch(`http://localhost:5000/luxury/${params.id}`)
       },
       {
         path: '/jeepDetails/:id',
-        element: <JeepDetails></JeepDetails>,
+        element:<PrivateRoute> <JeepDetails></JeepDetails></PrivateRoute>,
         loader: ({params})=>fetch(`http://localhost:5000/jeep/${params.id}`)
       }
       

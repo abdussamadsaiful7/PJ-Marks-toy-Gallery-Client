@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FaFacebookSquare, FaPinterest, FaYoutube, FaInstagram } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import toast from 'react-hot-toast';
+import { AuthContext } from '../Provider/AuthProvider';
 
 const Luxury = ({ luxury }) => {
+    const { user } = useContext(AuthContext);
     const { name, picture, price, rating, producer, quality, details } = luxury;
+
+    const notify = () => {
+
+        if (user) {
+            toast.success('Your favorite toy details is showed!');
+        }
+        else {
+            toast.error('Sorry at first login, please!')
+        }
+    }
 
     return (
         <div className="p-4 shadow-2xl">
@@ -11,7 +24,14 @@ const Luxury = ({ luxury }) => {
             <h1>Name: {name}</h1>
             <p>Quality: {quality}</p>
             <p>Price: $ {price}</p>
-            <Link to={`/luxuryDetails/${luxury._id}`}><button className="btn btn-outline btn-warning btn-sm mt-4">View Details</button></Link>
+            {
+                user && <Link to={`/jeepDetails/${luxury._id}`}><button onClick={notify} className="btn btn-outline btn-warning btn-sm mt-4">View Details
+                </button></Link>
+            }
+            {
+                !user && <Link to={`/jeepDetails/${luxury._id}`}><button onClick={notify} className="btn btn-outline btn-warning btn-sm mt-4">View Details
+                </button></Link>
+            }
             <div className="flex justify-between">
                 <div>
                     <p>Rating: {rating}</p>

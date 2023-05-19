@@ -37,9 +37,9 @@ const NavBar = () => {
                                     <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
                                 </a>
                                 <ul className="p-2 text-white">
-                                    <li><a>All Toys</a></li>
-                                    <li><a>Add Toy</a></li>
-                                    <li><a>My Toy</a></li>
+                                    <li><Link>All Toys</Link></li>
+                                    <li><Link to='/addToy'>Add Toy</Link></li>
+                                    <li><Link>My Toy</Link></li>
                                 </ul>
                             </li>
                             {user && <li><Link onClick={handleLogout}>Log out</Link></li>}
@@ -57,7 +57,7 @@ const NavBar = () => {
                         <li><Link>ALL TOYS</Link></li>
                         {
                             user && <>
-                                <li><Link>ADD TOY</Link></li>
+                                <li><Link to='/addToy'>ADD TOY</Link></li>
                                 <li><Link>MY TOY</Link></li>
                             </>
                         }
