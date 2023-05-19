@@ -5,7 +5,7 @@ import { FaFacebookSquare, FaPinterest, FaYoutube, FaInstagram } from "react-ico
 const ToyDetails = () => {
 
     const loaderCard = useLoaderData();
-    const { _id, toyName, photo, price, quantity, ratings, sellerEmail,
+    const { _id, toyName, photo, price, quantity, ratings, email,
         sellerName, descriptions, category } = loaderCard;
     console.log(loaderCard);
 
@@ -41,7 +41,7 @@ const ToyDetails = () => {
             </div>
             <div className='text-center my-20'>
                 <h1>Seller Name: {sellerName}</h1>
-                <p>Email: {sellerEmail}</p>
+                <p>Email: {email}</p>
                 <div className='mt-5 md:px-24 text-xl'>
                     <p><span className='font-extrabold'>Description: </span>
                         <span className='text-gray-600'>{ descriptions}</span></p>

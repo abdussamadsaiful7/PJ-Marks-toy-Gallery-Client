@@ -40,7 +40,7 @@ const NavBar = () => {
                                 <ul className="p-2 text-white">
                                     <li><Link to='/allToys'>All Toys</Link></li>
                                     <li><Link to='/addToy'>Add Toy</Link></li>
-                                    <li><Link>My Toy</Link></li>
+                                    <li><Link to='/myToy'>My Toy</Link></li>
                                 </ul>
                             </li>
                             {user && <li><Link onClick={handleLogout}>Log out</Link></li>}
@@ -59,7 +59,7 @@ const NavBar = () => {
                         {
                             user && <>
                                 <li><Link to='/addToy'>ADD TOY</Link></li>
-                                <li><Link>MY TOY</Link></li>
+                                <li><Link to='/myToy'>MY TOY</Link></li>
                             </>
                         }
                         {user && <li><Link onClick={handleLogout}>LOG OUT</Link></li>}

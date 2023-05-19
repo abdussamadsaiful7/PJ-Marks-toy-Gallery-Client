@@ -11,8 +11,8 @@ const Home = () => {
             <Banner></Banner>
             <ExtraOne></ExtraOne>
             <Gallery></Gallery>
-            <ReactTap></ReactTap>
             <Address></Address>
+            <ReactTap></ReactTap>
         </div>
     );
 };

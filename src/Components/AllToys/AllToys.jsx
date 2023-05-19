@@ -8,7 +8,7 @@ const AllToys = () => {
     const loadAllToy = useLoaderData();
     const [toys, setToys] = useState(loadAllToy)
     console.log(toys);
-    const { _id, toyName, photo, price, quantity, ratings, sellerEmail,
+    const { _id, toyName, photo, price, quantity, ratings, email,
         sellerName, descriptions, category } = toys;
 
     const { user } = useContext(AuthContext);
@@ -26,6 +26,7 @@ const AllToys = () => {
         <div className=' bg-gradient-to-r from-fuchsia-900 to-rgb(254, 249, 231)'>
             <div className='text-center'>
                 <input type="text" placeholder="Search product category" className=" input input-bordered input-warning w-full max-w-xs" />
+                <h1 className='text-2xl mt-4 font-extrabold'>ALL THE TOYS</h1>
             </div>
             <div className="overflow-x-auto md:mx-20">
                 <table className="table w-full my-10 border ">

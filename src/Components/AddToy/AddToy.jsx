@@ -10,19 +10,19 @@ const AddToy = () => {
         const toyName = form.toyName.value;
         const price = form.price.value;
         const sellerName = form.sellerName.value;
-        const sellerEmail = form.sellerEmail.value;
+        const email = form.email.value;
         const category = form.category.value;
         const ratings = form.ratings.value;
         const quantity = form.quantity.value;
         const descriptions = form.descriptions.value;
         const photo = form.photo.value;
         
-        const newToy = {toyName, price, sellerName, sellerEmail, category, ratings, quantity, descriptions, photo};
+        const newToy = {toyName, price, sellerName, email, category, ratings, quantity, descriptions, photo};
 
         console.log(newToy);
 
         //send to the server;
-        fetch('http://localhost:5000/allToys',{
+        fetch('http://localhost:5000/alltoys',{
             method:'POST',
             headers: {
                 "content-type": "application/json"
@@ -86,7 +86,7 @@ const AddToy = () => {
                             <span className="label-text">Seller Email</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" placeholder="seller email" name="sellerEmail" className="input input-bordered w-96" />
+                            <input type="text" placeholder="email" name="email" className="input input-bordered w-96" />
                         </label>
                     </div>
                 </div>
