@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import details from '../../assets/details.png'
+import toast from 'react-hot-toast';
+import { AuthContext } from '../Provider/AuthProvider';
 
 const AllToys = () => {
     const loadAllToy = useLoaderData();
@@ -8,8 +10,23 @@ const AllToys = () => {
     console.log(toys);
     const { _id, toyName, photo, price, quantity, ratings, sellerEmail,
         sellerName, descriptions, category } = toys;
+
+    const { user } = useContext(AuthContext);
+    const notify = () => {
+
+        if (user) {
+            toast.success('Your favorite toy details is showed!');
+        }
+        else {
+            toast.error('Sorry at first login, please!')
+        }
+    }
+
     return (
         <div className=' bg-gradient-to-r from-fuchsia-900 to-rgb(254, 249, 231)'>
+            <div className='text-center'>
+                <input type="text" placeholder="Search product category" className=" input input-bordered input-warning w-full max-w-xs" />
+            </div>
             <div className="overflow-x-auto md:mx-20">
                 <table className="table w-full my-10 border ">
                     {
@@ -33,10 +50,19 @@ const AllToys = () => {
                                     <td>${toy.price}</td>
 
                                     <td>
-                                        <Link> <img className='w-8 h-8' src={details} alt="" /> </Link>
+                                        {
+                                            user && <Link onClick={notify} to={`/allToys/${toy._id}`}>
+                                                <img className='w-8 h-8' src={details} alt="" />
+                                            </Link>
+                                        }
+                                        {
+                                            !user && <Link onClick={notify} to={`/allToys/${toy._id}`}>
+                                                <img className='w-8 h-8' src={details} alt="" />
+                                            </Link>
+                                        }
                                     </td>
                                 </tr>
-                                <tr/>
+                                <tr />
                             </tbody>
 
                         )

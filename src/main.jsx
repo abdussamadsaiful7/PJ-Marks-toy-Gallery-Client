@@ -20,6 +20,7 @@ import JeepDetails from './Components/ReactTab/Details/JeepDetails';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import AddToy from './Components/AddToy/AddToy';
 import AllToys from './Components/AllToys/AllToys';
+import ToyDetails from './Components/AllToys/ToyDetails';
 
 
 
@@ -54,6 +55,11 @@ const router = createBrowserRouter([
         path: '/allToys',
         element: <AllToys></AllToys>,
         loader: ()=>fetch('http://localhost:5000/alltoys')
+      },
+      {
+        path: 'allToys/:id',
+        element: <PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
+        loader: ({params})=>fetch(`http://localhost:5000/alltoys/${params.id}`)
       },
       {
         path: '/classicDetails/:id',
