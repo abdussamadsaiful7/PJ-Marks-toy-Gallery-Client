@@ -23,7 +23,8 @@ const NavBar = () => {
     }
     return (
         <div className=''>
-            <div className="navbar bg-base-100 bg-gradient-to-r from-fuchsia-900 to-rgb(254, 249, 231) lg:px-20 pt-8">
+            <div className="navbar bg-base-100 bg-gradient-to-r 
+                from-fuchsia-900 to-rgb(254, 249, 231) lg:px-20 pt-8">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">

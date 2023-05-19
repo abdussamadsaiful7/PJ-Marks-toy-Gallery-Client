@@ -18,21 +18,18 @@ const Classic = ({ classic }) => {
         }
     }
 
-
-
     return (
-
         <div className="p-4 shadow-2xl">
             <img className="w-full h-72 rounded-md mb-4" src={picture} alt="" />
             <h1>Name: {name}</h1>
             <p>Quality: {quality}</p>
             <p>Price: $ {price}</p>
             {
-                user && <Link to={`/jeepDetails/${classic._id}`}><button onClick={notify} className="btn btn-outline btn-warning btn-sm mt-4">View Details
+                user && <Link to={`/classicDetails/${classic._id}`}><button onClick={notify} className="btn btn-outline btn-warning btn-sm mt-4">View Details
                 </button></Link>
             }
             {
-                !user && <Link to={`/jeepDetails/${classic._id}`}><button onClick={notify} className="btn btn-outline btn-warning btn-sm mt-4">View Details
+                !user && <Link to={`/classicDetails/${classic._id}`}><button onClick={notify} className="btn btn-outline btn-warning btn-sm mt-4">View Details
                 </button></Link>
             }
             <div className="flex justify-between">

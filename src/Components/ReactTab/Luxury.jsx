@@ -25,11 +25,11 @@ const Luxury = ({ luxury }) => {
             <p>Quality: {quality}</p>
             <p>Price: $ {price}</p>
             {
-                user && <Link to={`/jeepDetails/${luxury._id}`}><button onClick={notify} className="btn btn-outline btn-warning btn-sm mt-4">View Details
+                user && <Link to={`/luxuryDetails/${luxury._id}`}><button onClick={notify} className="btn btn-outline btn-warning btn-sm mt-4">View Details
                 </button></Link>
             }
             {
-                !user && <Link to={`/jeepDetails/${luxury._id}`}><button onClick={notify} className="btn btn-outline btn-warning btn-sm mt-4">View Details
+                !user && <Link to={`/luxuryDetails/${luxury._id}`}><button onClick={notify} className="btn btn-outline btn-warning btn-sm mt-4">View Details
                 </button></Link>
             }
             <div className="flex justify-between">
