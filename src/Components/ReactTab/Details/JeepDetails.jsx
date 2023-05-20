@@ -5,6 +5,7 @@ import { FaFacebookSquare, FaPinterest, FaYoutube, FaInstagram } from "react-ico
 const JeepDetails = () => {
     const loaderCard = useLoaderData();
     console.log(loaderCard);
+    UseTitle('Jeep Details')
     const { _id, name, picture, price, rating, producer, quality, details } = loaderCard;
     return (
         <div className='my-20'>

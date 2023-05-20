@@ -1,11 +1,14 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import useTitle from '../../Hook/useTitle';
 
 const UpdateToy = () => {
     const updateToy = useLoaderData();
     const { _id, toyName, photo, price, quantity, ratings, email,
         sellerName, descriptions, category } = updateToy;
+
+        useTitle('Update page')
 
     const handleUpdateToy = (event) => {
         event.preventDefault();

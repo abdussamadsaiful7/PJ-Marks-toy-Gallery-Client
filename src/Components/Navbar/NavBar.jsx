@@ -2,10 +2,13 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/PJMARKS.png'
 import { AuthContext } from '../Provider/AuthProvider';
+import useTitle from '../../Hook/useTitle';
 
 
 const NavBar = () => {
     const { user, logOut, loading } = useContext(AuthContext);
+
+    useTitle('Home');
 
     const notify = () => toast.error('Successfully logout!');
 

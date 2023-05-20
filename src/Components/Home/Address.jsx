@@ -1,11 +1,12 @@
 import React from 'react';
-import { HiClock,  } from "react-icons/hi2";
+import { HiClock, } from "react-icons/hi2";
 import { FaCalendarAlt, FaCommentDots, FaMapMarkerAlt, FaPhoneAlt, FaRegCircle } from "react-icons/fa";
 
 const Address = () => {
     return (
         <div>
-            <div className='grid lg:grid-cols-3 gap-4 md:px-10 py-20 bg-black text-white rounded mb-10'>
+            <div className='grid lg:grid-cols-3 gap-4 md:px-10 py-20 bg-black 
+            text-white rounded mb-10' data-aos="fade-right" data-aos-duration="3000">
                 <div className='flex items-center gap-4'>
                     <div className='relative'>
                         <span className='text-4xl'> <FaCalendarAlt /></span>
@@ -33,7 +34,7 @@ const Address = () => {
                     </div>
                     <div>
                         <p className='font-bold'>Need a repair? our address</p>
-                        <h1 className='text-2xl font-bold'>Dhanmondi 32, Dhaka, <br/> Bangladesh</h1>
+                        <h1 className='text-2xl font-bold'>Dhanmondi 32, Dhaka, <br /> Bangladesh</h1>
                     </div>
                 </div>
             </div>

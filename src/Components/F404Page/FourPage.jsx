@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link, useRouteError } from 'react-router-dom';
 import four from '../../assets/404-stamp.jpg'
+import useTitle from '../../Hook/useTitle';
 
 const FourPage = () => {
-    const { err, status } = useRouteError()
+    const { err, status } = useRouteError();
+    useTitle('404-Page')
     return (
         <div>
             <section className='flex items-center h-screen p-16 bg-gray-100 text-gray-900'>

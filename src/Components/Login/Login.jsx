@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import google from '../../assets/google.png'
 import { AuthContext } from '../Provider/AuthProvider';
+import useTitle from '../../Hook/useTitle';
 
 
 const Login = () => {
@@ -9,6 +10,8 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/'
+
+    useTitle('Login')
 
     const { logIn, user, googleLogin } = useContext(AuthContext);
     const [error, setError] = useState([]);

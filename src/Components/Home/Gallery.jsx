@@ -17,29 +17,57 @@ const Gallery = () => {
             <h1 className='text-center text-4xl font-extrabold mb-5 text-fuchsia-900'>
                 TOY CARS GALLERY</h1>
             <div className='grid lg:grid-cols-4 md:grid-cols-2 gap-4'>
-                <div className='p-2 shadow-2xl'>
-                    <img className='w-full h-64 rounded-md' src={car1} alt="" />
+                <div className='p-2 border shadow-md' data-aos="fade-right">
+                    <img className='w-full h-52 rounded-md' src={car1} alt="" />
+                    <div className="divider"></div>
+                    <h1 className='text-center'><span className='font-semibold'>Category: </span> Jeep cars toy</h1>
                 </div>
-                <div className='p-2 shadow-2xl'>
-                    <img className='w-full h-64  rounded-md' src={car2} alt="" />
+                <div className='p-2 border shadow-md' data-aos="fade-right">
+                    <img className='w-full h-52  rounded-md' src={car2} alt="" />
+                    <div className="divider"></div>
+                    <h1 className='text-center'><span className='font-semibold'>Category: </span> Classic cars toy</h1>
                 </div>
-                <div className='p-2 shadow-2xl'>
-                    <img className='w-full h-64  rounded-md' src={car3} alt="" />
+                <div className='p-2 border shadow-md' data-aos="fade-left">
+                    <img className='w-full h-52  rounded-md' src={car3} alt="" />
+                    <div className="divider"></div>
+                    <h1 className='text-center'><span className='font-semibold'>Category: </span>
+                        Classic cars toy</h1>
                 </div>
-                <div className='p-2 shadow-2xl'>
-                    <img className='w-full h-64  rounded-md' src={car4} alt="" />
+                <div className='p-2 border shadow-md' data-aos="fade-left">
+                    <img className='w-full h-52  rounded-md' src={car4} alt="" />
+                    <div className="divider"></div>
+                    <h1 className='text-center'><span className='font-semibold'>Category: </span> Jeep cars toy</h1>
                 </div>
-                <div className='p-2 shadow-2xl'>
-                    <img className='w-full h-64  rounded-md' src={car7} alt="" />
+
+
+
+                <div className='p-2 border shadow-md' data-aos="fade-up"
+                    data-aos-duration="3000">
+                    <img className='w-full h-52  rounded-md' src={car7} alt="" />
+                    <div className="divider"></div>
+                    <h1 className='text-center'><span className='font-semibold'>Category: </span>
+                        Classic cars toy</h1>
                 </div>
-                <div className='p-2 shadow-2xl'>
-                    <img className='w-full h-64  rounded-md' src={car6} alt="" />
+                <div className='p-2 border shadow-md' data-aos="fade-up"
+                    data-aos-duration="3000">
+                    <img className='w-full h-52  rounded-md' src={car6} alt="" />
+                    <div className="divider"></div>
+                    <h1 className='text-center'><span className='font-semibold'>Category: </span>
+                        Luxury cars toy</h1>
                 </div>
-                <div className='p-2 shadow-2xl'>
-                    <img className='w-full h-64  rounded-md' src={car8} alt="" />
+                <div className='p-2 border shadow-md' data-aos="fade-up"
+                    data-aos-duration="3000">
+                    <img className='w-full h-52  rounded-md' src={car8} alt="" />
+                    <div className="divider"></div>
+                    <h1 className='text-center'><span className='font-semibold'>Category: </span>
+                        Luxury cars toy</h1>
                 </div>
-                <div className='p-2 shadow-2xl'>
-                    <img className='w-full h-64  rounded-md' src={car9} alt="" />
+                <div className='p-2 border shadow-md' data-aos="fade-up"
+                    data-aos-duration="3000">
+                    <img className='w-full h-52  rounded-md' src={car9} alt="" />
+                    <div className="divider"></div>
+                    <h1 className='text-center'><span className='font-semibold'>Category: </span>
+                        Luxury cars toy</h1>
                 </div>
             </div>
         </div>

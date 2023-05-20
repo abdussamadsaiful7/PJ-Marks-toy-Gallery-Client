@@ -1,11 +1,13 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { FaFacebookSquare, FaPinterest, FaYoutube, FaInstagram } from "react-icons/fa";
+import useTitle from '../../../Hook/useTitle';
 
 const ClassicDetails = () => {
-    
+
     const loaderCard = useLoaderData();
     console.log(loaderCard);
+    useTitle('Classic Details')
     const { _id, name, picture, price, rating, producer, quality, details } = loaderCard;
     return (
         <div className='my-20'>
@@ -38,8 +40,8 @@ const ClassicDetails = () => {
                 </div>
             </div>
             <div className='mt-14 md:px-24 text-xl'>
-                <p><span className='font-extrabold'>Description: </span> 
-                <span  className='text-gray-600'>{details}</span></p>
+                <p><span className='font-extrabold'>Description: </span>
+                    <span className='text-gray-600'>{details}</span></p>
             </div>
         </div>
     );

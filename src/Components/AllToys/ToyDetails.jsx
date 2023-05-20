@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { FaFacebookSquare, FaPinterest, FaYoutube, FaInstagram } from "react-icons/fa";
+import useTitle from '../../Hook/useTitle';
 
 const ToyDetails = () => {
 
@@ -8,6 +9,8 @@ const ToyDetails = () => {
     const { _id, toyName, photo, price, quantity, ratings, email,
         sellerName, descriptions, category } = loaderCard;
     console.log(loaderCard);
+
+    useTitle('Toy Details')
 
     return (
         <div className='my-20'>

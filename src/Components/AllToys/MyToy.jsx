@@ -2,16 +2,18 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import { toast } from 'react-hot-toast';
 import { Link } from 'react-router-dom';
+import useTitle from '../../Hook/useTitle';
 
 
 const MyToy = () => {
     const { user } = useContext(AuthContext);
     const [myToys, setMyToys] = useState([]);
     console.log(myToys);
+    useTitle('My Toys')
     const { _id, toyName, photo, price, quantity, ratings, email,
         sellerName, descriptions, category } = myToys;
 
-    const url = `https://fantasy-toy-server.vercel.app/alltoys?email=${user?.email}`
+    const url = `https://fantasy-toy-server.vercel.app/alltoys?email=${user?.email}&${myToys?.price}`
     useEffect(() => {
         fetch(url)
             .then(res => res.json())

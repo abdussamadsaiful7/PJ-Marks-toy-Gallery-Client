@@ -8,7 +8,7 @@ const Banner = () => {
         <div className='bg-gradient-to-r from-fuchsia-900 to-rgb(254, 249, 231) 
          py-5 lg:px-20'>
             <div className='lg:flex items-center justify-between my-10  bg-[url("")] bg-no-repeat w-full'>
-                <div className='px-5'>
+                <div className='px-5' data-aos="fade-right">
                     <h1 className='text-4xl font-extrabold'>Welcome to <span className='text-yellow-500'>
                         PJM</span><span className='text-green-500'>ARKS-GALL</span><span className='text-yellow-500'>ERY</span></h1>
                     <p className='pt-4 text-lg text-white md:pr-20'>At Fantasy Gallery Cars, we have a rich history rooted in a deep passion for toys and a love for automotive adventures. Our journey began over [insert number of years] years ago when our founder Saife Saifullah embarked on a mission to create a toy store that would bring joy, excitement, and imagination to children and car enthusiasts alike.
