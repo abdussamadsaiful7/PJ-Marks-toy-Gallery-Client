@@ -22,6 +22,7 @@ import AddToy from './Components/AddToy/AddToy';
 import AllToys from './Components/AllToys/AllToys';
 import ToyDetails from './Components/AllToys/ToyDetails';
 import MyToy from './Components/AllToys/MyToy';
+import UpdateToy from './Components/UpdateToy/UpdateToy';
 
 
 
@@ -55,12 +56,17 @@ const router = createBrowserRouter([
       {
         path: '/allToys',
         element: <AllToys></AllToys>,
-        loader: ()=>fetch('http://localhost:5000/alltoys')
+        loader: ()=>fetch('https://fantasy-toy-server.vercel.app/alltoys')
+      },
+      {
+        path: '/updateToy/:id',
+        element:<PrivateRoute> <UpdateToy></UpdateToy></PrivateRoute>,
+        loader: ({params})=>fetch(`https://fantasy-toy-server.vercel.app/alltoys/${params.id}`)
       },
       {
         path: 'allToys/:id',
         element: <PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
-        loader: ({params})=>fetch(`http://localhost:5000/alltoys/${params.id}`)
+        loader: ({params})=>fetch(`https://fantasy-toy-server.vercel.app/alltoys/${params.id}`)
       },
       {
         path: '/myToy',
@@ -69,17 +75,17 @@ const router = createBrowserRouter([
       {
         path: '/classicDetails/:id',
         element: <PrivateRoute><ClassicDetails></ClassicDetails></PrivateRoute>,
-        loader: ({params})=>fetch(`http://localhost:5000/classic/${params.id}`)
+        loader: ({params})=>fetch(`https://fantasy-toy-server.vercel.app/classic/${params.id}`)
       },
       {
         path: '/luxuryDetails/:id',
         element: <PrivateRoute><LuxuryDetails></LuxuryDetails></PrivateRoute>,
-        loader: ({params})=>fetch(`http://localhost:5000/luxury/${params.id}`)
+        loader: ({params})=>fetch(`https://fantasy-toy-server.vercel.app/luxury/${params.id}`)
       },
       {
         path: '/jeepDetails/:id',
         element:<PrivateRoute> <JeepDetails></JeepDetails></PrivateRoute>,
-        loader: ({params})=>fetch(`http://localhost:5000/jeep/${params.id}`)
+        loader: ({params})=>fetch(`https://fantasy-toy-server.vercel.app/jeep/${params.id}`)
       }
       
     ]

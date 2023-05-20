@@ -10,7 +10,7 @@ const ReactTap = () => {
     //luxury toy cars
     const [luxuryCars, setLuxuryCars] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/luxury')
+        fetch('https://fantasy-toy-server.vercel.app/luxury')
             .then(res => res.json())
             .then(data => {
                 setLuxuryCars(data)
@@ -20,7 +20,7 @@ const ReactTap = () => {
     //jeep toy cars
     const [jeepCars, setJeepCars] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/jeep')
+        fetch('https://fantasy-toy-server.vercel.app/jeep')
             .then(res => res.json())
             .then(data => {
                 setJeepCars(data)
@@ -30,7 +30,7 @@ const ReactTap = () => {
     //classic toy cars 
     const [classicCars, setClassicCars] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/classic')
+        fetch('https://fantasy-toy-server.vercel.app/classic')
             .then(res => res.json())
             .then(data => {
                 setClassicCars(data)

@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Swal from 'sweetalert2';
+import { AuthContext } from '../Provider/AuthProvider';
 
 const AddToy = () => {
+
+    const {user}=useContext(AuthContext);
 
     const handleAddToy =(event)=>{
         event.preventDefault();
@@ -22,7 +25,7 @@ const AddToy = () => {
         console.log(newToy);
 
         //send to the server;
-        fetch('http://localhost:5000/alltoys',{
+        fetch('https://fantasy-toy-server.vercel.app/alltoys',{
             method:'POST',
             headers: {
                 "content-type": "application/json"
@@ -47,7 +50,7 @@ const AddToy = () => {
 
     return (
         <div>
-            <form onSubmit={handleAddToy} className="form-control px-20 py-20 bg-gradient-to-r from-green-700 to-yellow-100">
+            <form onSubmit={handleAddToy} className="form-control px-20 py-20 bg-gradient-to-r from-green-600 to-yellow-300">
                 <h1 className='text-center font-extrabold text-4xl'>Add Toy Cars</h1>
 
                 {/* name, price section */}
@@ -86,7 +89,7 @@ const AddToy = () => {
                             <span className="label-text">Seller Email</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" placeholder="email" name="email" className="input input-bordered w-96" />
+                            <input type="text" placeholder="email" name="email" defaultValue={user?.email} className="input input-bordered w-96" />
                         </label>
                     </div>
                 </div>

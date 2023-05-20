@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import { toast } from 'react-hot-toast';
+import { Link } from 'react-router-dom';
 
 
 const MyToy = () => {
@@ -10,28 +11,28 @@ const MyToy = () => {
     const { _id, toyName, photo, price, quantity, ratings, email,
         sellerName, descriptions, category } = myToys;
 
-    const url = `http://localhost:5000/alltoys?email=${user?.email}`
+    const url = `https://fantasy-toy-server.vercel.app/alltoys?email=${user?.email}`
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
             .then(data => setMyToys(data))
     }, [])
 
-    const handleDelete = id =>{
+    const handleDelete = id => {
         const process = confirm("Are You sure?")
-        if(process){
-            fetch(`http://localhost:5000/alltoys/${id}`,{
+        if (process) {
+            fetch(`https://fantasy-toy-server.vercel.app/alltoys/${id}`, {
                 method: 'DELETE'
             })
-            .then(res=>res.json())
-            .then(data=> {
-                console.log(data)
-                if (data.deletedCount > 0) {
-                    toast.error('Delete successful!')
-                    const remaining = myToys.filter(myToy =>myToy._id !== id)
-                    setMyToys(remaining);
-                }
-            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data)
+                    if (data.deletedCount > 0) {
+                        toast.error('Delete successful!')
+                        const remaining = myToys.filter(myToy => myToy._id !== id)
+                        setMyToys(remaining);
+                    }
+                })
         }
     }
 
@@ -56,10 +57,12 @@ const MyToy = () => {
                                     <td>{myToy.category}</td>
                                     <td>{myToy.quantity}</td>
                                     <td>${myToy.price}</td>
-                                    <td><button className="btn btn-ghost btn-xs">Update</button></td>
+                                    <td><Link to={`/updateToy/${myToy._id}`}>
+                                        <button className="btn btn-ghost btn-xs">Update</button>
+                                    </Link></td>
                                     <th>
                                         <label>
-                                            <button onClick={()=>handleDelete(myToy._id)} className="btn btn-circle btn-outline btn-sm">
+                                            <button onClick={() => handleDelete(myToy._id)} className="btn btn-circle btn-outline btn-sm">
                                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
                                             </button>
                                         </label>
