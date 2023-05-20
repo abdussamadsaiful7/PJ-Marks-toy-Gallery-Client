@@ -49,7 +49,7 @@ const NavBar = () => {
                         </ul>
                     </div>
                     <img className='w-20 h-20' src={logo} alt="" />
-                    <Link to='/' className="btn btn-ghost normal-case text-3xl lg:mr-20 text-yellow-500">
+                    <Link to='/' className="btn btn-ghost normal-case text-xl lg:mr-20 text-yellow-500">
                         PJM<span className='text-green-600 font-extrabold'>ARKS</span> <br/></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
