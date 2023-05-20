@@ -13,7 +13,7 @@ import animation1 from "../../assets/animation/79797-car-lottie-animation.json";
 const Gallery = () => {
     return (
         <div className='lg:mx-20 mx-5 my-20'>
-            <div className='w-64 h-52 mx-auto' ><Lottie animationData={animation1} loop={true} /></div>
+            <div className='w-64 h-48 mx-auto' ><Lottie animationData={animation1} loop={true} /></div>
             <h1 className='text-center text-4xl font-extrabold mb-5 text-fuchsia-900'>
                 TOY CARS GALLERY</h1>
             <div className='grid lg:grid-cols-4 md:grid-cols-2 gap-4'>

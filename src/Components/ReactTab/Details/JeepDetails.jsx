@@ -1,11 +1,12 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { FaFacebookSquare, FaPinterest, FaYoutube, FaInstagram } from "react-icons/fa";
+import useTitle from '../../../Hook/useTitle';
 
 const JeepDetails = () => {
     const loaderCard = useLoaderData();
     console.log(loaderCard);
-    UseTitle('Jeep Details')
+    useTitle('Jeep Details')
     const { _id, name, picture, price, rating, producer, quality, details } = loaderCard;
     return (
         <div className='my-20'>

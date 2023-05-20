@@ -29,7 +29,7 @@ const AllToys = () => {
     }
 
     return (
-        <div className=' bg-gradient-to-r from-fuchsia-900 to-rgb(254, 249, 231)'>
+        <div className=' bg-gradient-to-r from-fuchsia-950 to-rgb(254, 249, 231)'>
 
 
             <div className='text-center'>

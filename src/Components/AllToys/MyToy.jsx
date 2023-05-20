@@ -39,7 +39,7 @@ const MyToy = () => {
     }
 
     return (
-        <div className='bg-gradient-to-r from-fuchsia-900 to-rgb(254, 249, 231)'>
+        <div className='bg-gradient-to-r from-fuchsia-950 to-rgb(254, 249, 231)'>
             <h1 className='text-center text-xl font-extrabold'>THIS IS MY TOY: {myToys.length} </h1>
             <div className="overflow-x-auto md:mx-20">
                 <table className="table w-full my-10 border">

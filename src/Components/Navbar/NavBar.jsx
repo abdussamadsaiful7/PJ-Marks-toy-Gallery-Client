@@ -27,7 +27,7 @@ const NavBar = () => {
     return (
         <div className=''>
             <div className="navbar bg-base-100 bg-gradient-to-r 
-                from-fuchsia-900 to-rgb(254, 249, 231) lg:px-20 pt-8">
+                from-fuchsia-950 to-rgb(254, 249, 231) lg:px-20 pt-8">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -49,6 +49,7 @@ const NavBar = () => {
                             {user && <li><Link onClick={handleLogout}>Log out</Link></li>}
                             {!user && <li><Link to='/login'>Login</Link></li>}
                             <li><Link to='/blog'>Blog</Link></li>
+                            <li><Link to='/about'>About</Link></li>
                         </ul>
                     </div>
                     <img className='w-20 h-20' src={logo} alt="" />
@@ -76,7 +77,7 @@ const NavBar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link><a className="lg:btn lg:btn-outline btn-success hidden">About Us</a></Link>
+                    <Link to='/about'><a className="lg:btn lg:btn-outline btn-success hidden">About Us</a></Link>
                 </div>
             </div>
         </div>

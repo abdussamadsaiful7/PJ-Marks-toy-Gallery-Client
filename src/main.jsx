@@ -23,6 +23,7 @@ import AllToys from './Components/AllToys/AllToys';
 import ToyDetails from './Components/AllToys/ToyDetails';
 import MyToy from './Components/AllToys/MyToy';
 import UpdateToy from './Components/UpdateToy/UpdateToy';
+import About from './Components/About/About';
 
 
 
@@ -86,6 +87,10 @@ const router = createBrowserRouter([
         path: '/jeepDetails/:id',
         element:<PrivateRoute> <JeepDetails></JeepDetails></PrivateRoute>,
         loader: ({params})=>fetch(`https://fantasy-toy-server.vercel.app/jeep/${params.id}`)
+      },
+      {
+        path: '/about',
+        element: <About></About>
       }
       
     ]
