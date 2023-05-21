@@ -50,7 +50,7 @@ const AllToys = () => {
                                     <td>
 
                                         <div className="avatar">
-                                            <div className=" w-14 h-14">
+                                            <div className=" lg:w-14 lg:h-14 w-6 h-6">
                                                 <img src={toy.photo} alt="Avatar Tailwind CSS Component" />
                                             </div>
                                         </div>
@@ -65,12 +65,24 @@ const AllToys = () => {
                                     <td>
                                         {
                                             user && <Link onClick={notify} to={`/allToys/${toy._id}`}>
-                                                <img className='w-8 h-8' src={details} alt="" />
+                                                <img className='md:w-6 md:h-6 w-1 h-1' src={details} alt="" />
                                             </Link>
                                         }
                                         {
                                             !user && <Link onClick={notify} to={`/allToys/${toy._id}`}>
-                                                <img className='w-8 h-8' src={details} alt="" />
+                                                <img className='md:w-6 md:h-6 w-1 h-1' src={details} alt="" />
+                                            </Link>
+                                        }
+                                    </td>
+                                    <td className='md:hidden'>
+                                        {
+                                            user && <Link onClick={notify} to={`/allToys/${toy._id}`}>
+                                                <button>Details</button>
+                                            </Link>
+                                        }
+                                        {
+                                            !user && <Link onClick={notify} to={`/allToys/${toy._id}`}>
+                                                 <button>Details</button>
                                             </Link>
                                         }
                                     </td>

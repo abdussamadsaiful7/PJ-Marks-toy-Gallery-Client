@@ -40,7 +40,7 @@ const NavBar = () => {
                                     Toys
                                     <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
                                 </a>
-                                <ul className="p-2 text-white">
+                                <ul className="p-2">
                                     <li><Link to='/allToys'>All Toys</Link></li>
                                     <li><Link to='/addToy'>Add Toy</Link></li>
                                     <li><Link to='/myToy'>My Toy</Link></li>
@@ -50,11 +50,16 @@ const NavBar = () => {
                             {!user && <li><Link to='/login'>Login</Link></li>}
                             <li><Link to='/blog'>Blog</Link></li>
                             <li><Link to='/about'>About</Link></li>
+                            <div className="tooltip lg:ml-10" data-tip=" PJMARKS-GALLERY">
+                                {
+                                    user && user?.email ? <img style={{ width: '40px', height: '40px', borderRadius: '50%' }} src={user?.photoURL} alt="" /> : null
+                                }
+                            </div>
                         </ul>
                     </div>
                     <img className='w-20 h-20' src={logo} alt="" />
                     <Link to='/' className="btn btn-ghost normal-case text-xl lg:mr-20 text-yellow-500">
-                        PJM<span className='text-green-600 font-extrabold'>ARKS</span> <br/></Link>
+                        PJM<span className='text-green-600 font-extrabold'>ARKS</span> <br /></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 text-white font-bold">

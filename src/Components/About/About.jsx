@@ -10,14 +10,14 @@ const About = () => {
     return (
         <div>
             <h1 className='text-2xl font-extrabold text-center my-10'>ABOUT US</h1>
-            <img className='w-1/2 h-96 mx-auto mb-10' src={about} alt="" />
-            <div className='md:mx-20'>
+            <img className='lg:w-1/2 lg:h-96 h-64 w-64 mx-auto mb-10' src={about} alt="" />
+            <div className='md:mx-20 mx-10'>
                 <p className='mb-4 font-extrabold'>Welcome to PJMARKS GALLERY - Your Ultimate Destination for Toy Cars in Dhaka, Bangladesh!</p>
 
                 <p>  At PJMARKS GALLERY, we are passionate about providing a world of joy and excitement to children and collectors alike. As the premier toy store specializing in cars, we offer an extensive range of high-quality toy cars, replicas, and collectibles that cater to enthusiasts of all ages.
                     <br />
                     Established in 1992, PJMARKS GALLERY has been serving the Dhaka community for several years, bringing smiles to the faces of countless children and car enthusiasts. Our commitment to exceptional customer service and a vast selection of products sets us apart from other toy stores in the city.</p>
-                <p>Why Choose Us?</p>
+                <p  className='text-xl font-extrabold mt-14 mb-4'>Why Choose Us?</p>
                 <p>1. Wide Range of Products: We pride ourselves on offering an extensive collection of toy cars, featuring popular brands, iconic models, and limited editions. Whether you're looking for die-cast models, remote-controlled cars, or miniature replicas, we have something to suit every taste and budget.</p>
                 <p>2. Quality and Authenticity: We understand the importance of authenticity when it comes to collectibles. That's why we source our products from trusted manufacturers and distributors, ensuring that every toy car in our store meets the highest standards of quality.</p>
                 <p>3. Knowledgeable Staff: Our dedicated team of toy enthusiasts is always ready to assist you in finding the perfect toy car or provide recommendations based on your preferences. We are passionate about cars and toys, and we love sharing our knowledge and expertise with our customers.</p>
