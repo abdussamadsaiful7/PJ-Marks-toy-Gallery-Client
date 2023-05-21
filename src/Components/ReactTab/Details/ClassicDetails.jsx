@@ -13,7 +13,7 @@ const ClassicDetails = () => {
         <div className='my-20'>
             <div className='lg:flex justify-center items-center p-4 py-4 shadow-2xl 
             md:mx-52 space-x-20'>
-                <div><img className="w-full h-72 rounded-md mb-4" src={picture} alt="" /></div>
+                <div><img className="w-full h-72 transition cursor-pointer ease-in delay-150 hover:-translate-y-1 hover:scale-110  duration-300 rounded-md mb-4" src={picture} alt="" /></div>
                 <div className='space-y-2'>
                     <h1 className='text-xl font-semibold'>Name: {name}</h1>
                     <p>Price: ${price}</p>

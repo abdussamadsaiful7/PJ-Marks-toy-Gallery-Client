@@ -20,7 +20,7 @@ const Luxury = ({ luxury }) => {
 
     return (
         <div className="p-4 shadow-2xl">
-            <img className="w-full h-72 rounded-md mb-4" src={picture} alt="" />
+            <img className="w-full h-72 transition cursor-pointer ease-in delay-150 hover:-translate-y-1 hover:scale-110  duration-300 rounded-md mb-4" src={picture} alt="" />
             <h1>Name: {name}</h1>
             <p>Quality: {quality}</p>
             <p>Price: $ {price}</p>
