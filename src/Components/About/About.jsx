@@ -3,8 +3,10 @@ import about from '../../assets/about.jpg'
 import shop1 from '../../assets/car/shop1.jpg'
 import shop2 from '../../assets/car/shop2.png'
 import shop3 from '../../assets/car/shop3.jpg'
+import useTitle from '../../Hook/useTitle'
 
 const About = () => {
+    useTitle('About')
     return (
         <div>
             <h1 className='text-2xl font-extrabold text-center my-10'>ABOUT US</h1>
